@@ -1,0 +1,15 @@
+# The backend service does not need to be publicly exposed 
+# so something like ClusterIP or NodePort should be fine
+# You will need to use type: LoadBalancer so that the frontend can hit the API when loaded in the browser# You might want to use type: LoadBalancer for this one
+apiVersion: v1
+kind: Service
+metadata:
+  name: ce-todo-list-project-database-service
+spec:
+  selector:
+    app: ce-todo-list-project-database
+  ports:
+    - protocol: TCP
+      port: 5432
+      targetPort: 5432
+  type: ClusterIP

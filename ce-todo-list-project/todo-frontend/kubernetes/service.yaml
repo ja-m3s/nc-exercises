@@ -1,0 +1,13 @@
+# You might want to use type: LoadBalancer for this one
+apiVersion: v1
+kind: Service
+metadata:
+  name: ce-todo-list-project-todo-frontend-service
+spec:
+  selector:
+    app: ce-todo-list-project-todo-frontend
+  ports:
+    - protocol: TCP
+      port: 8080
+      targetPort: 80
+  type: LoadBalancer

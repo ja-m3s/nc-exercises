@@ -1,0 +1,15 @@
+{
+  "name": "fun-katas",
+  "version": "1.0.0",
+  "description": "Please see instructions for this repo [here](https://l2c.northcoders.com/courses/fun/solo-katas).",
+  "main": "index.js",
+  "scripts": {
+    "test": "jest"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "jest": "^29.6.1"
+  }
+}

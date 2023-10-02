@@ -1,0 +1,22 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name:  ce-todo-list-project-todo-frontend
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: ce-todo-list-project-todo-frontend
+  template:
+    metadata:
+      labels:
+        app: ce-todo-list-project-todo-frontend
+    spec:
+      containers:
+        - name: ce-todo-list-project-todo-frontend
+          image: jamesw202307/ce-todo-list-project-todo-frontend:5.0
+          ports:
+            - containerPort: 80
+          env:
+            - name: API_HOST
+              value: 10.64.140.43:3000

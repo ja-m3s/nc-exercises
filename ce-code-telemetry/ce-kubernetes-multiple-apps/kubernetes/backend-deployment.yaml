@@ -1,0 +1,19 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: bookstore-backend-api
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: bookstore-backend-api
+  template:
+    metadata:
+      labels:
+        app: bookstore-backend-api
+    spec:
+      containers:
+        - name: bookstore-backend-api
+          image: jamesw202307/bookstore-backend-logged:latest
+          ports:
+            - containerPort: 5000

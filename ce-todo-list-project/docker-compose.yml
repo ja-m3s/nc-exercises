@@ -1,0 +1,19 @@
+services:
+  api:
+    build: ./backend-api
+    ports:
+      - "3000:3000"
+    environment:
+      - DATABASE_HOST=postgres-db
+  postgres-db:
+    build: ./database
+    environment:
+      - POSTGRES_USER=user
+      - POSTGRES_PASSWORD=password
+      - POSTGRES_DB=list_items
+    ports: 
+      - "5432:5432"
+  frontend:
+    build: ./todo-frontend
+    ports: 
+      - "8080:80"

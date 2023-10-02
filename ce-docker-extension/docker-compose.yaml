@@ -1,0 +1,28 @@
+# Use postgres/example user/password credentials
+version: "3.1"
+
+services:
+  db:
+    image: postgres:latest
+    container_name: database
+    restart: always
+    ports:
+      - 5432:5432
+    environment:
+      POSTGRES_PASSWORD: 12341234
+      ENV: "dev"
+  nginx:
+    image: nginx-modified:latest
+    container_name: webserver
+    restart: unless-stopped
+    ports:
+      - 80:80
+    environment:
+      ENV: "dev"
+  node-api:
+    image: node-api:latest
+    container_name: api
+    ports:
+      - 3000:3000
+    environment:
+      ENV: "dev"

@@ -1,0 +1,19 @@
+{
+  "name": "ce-pipeline-morning-task",
+  "version": "1.0.0",
+  "description": "Use the pieces of JavaScript provided below try and create a series of function calls or commands in `pipeline.js` that achieves the following steps in order before moving onto the next one:",
+  "main": "pipeline,js",
+  "scripts": {
+    "test": "npm test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/nc-m3s/ce-pipeline-morning-task.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/nc-m3s/ce-pipeline-morning-task/issues"
+  },
+  "homepage": "https://github.com/nc-m3s/ce-pipeline-morning-task#readme"
+}

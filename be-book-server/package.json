@@ -1,0 +1,15 @@
+{
+  "name": "be-book-server",
+  "version": "1.0.0",
+  "description": "Instructions for today's sprint can be found at: https://l2c.northcoders.com/courses/be/book-server",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start" : "nodemon server.js"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "nodemon": "^3.0.1"
+  }
+}

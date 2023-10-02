@@ -1,0 +1,26 @@
+# Dont forget those env vars (DATABASE_HOST) so the backend knows where the database lives
+# You can use internal DNS for pointing the backend API at the database
+# For example if you setup a service for the database called database-service then the internal 
+# host name is database-service.default.svc.cluster.local
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name:  ce-todo-list-project-backend-api
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: ce-todo-list-project-backend-api
+  template:
+    metadata:
+      labels:
+        app: ce-todo-list-project-backend-api
+    spec:
+      containers:
+        - name: ce-todo-list-project-backend-api
+          image: jamesw202307/ce-todo-list-project-backend-api:3.0
+          ports:
+            - containerPort: 3000
+          env:
+            - name: DATABASE_HOST
+              value: ce-todo-list-project-database-service.default.svc.cluster.local
